@@ -1,87 +1,14 @@
-body{
-  margin:0;
-  font-family:Arial;
-  background:#fafafa;
-}
-
-.topo{
+.categoria{
   background:#7b2cbf;
   color:white;
+  padding:40px;
   text-align:center;
-  padding:25px;
-}
-
-.logo{max-height:90px}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:white;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 4px 10px #00000030;
-}
-
-.card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
-
-.info{padding:15px}
-
-.preco{
-  font-weight:bold;
-  color:#38b000;
-}
-
-.ver-mais{
-  display:block;
-  background:#ffb703;
-  padding:10px;
-  text-align:center;
-  border-radius:8px;
-  text-decoration:none;
-  color:black;
-  font-weight:bold;
-}
-
-.img-detalhe{
-  width:100%;
-  max-width:450px;
-  display:block;
-  margin:auto;
-}
-
-.preco-grande{
   font-size:22px;
-  color:#38b000;
+  border-radius:12px;
+  text-decoration:none;
   font-weight:bold;
 }
 
-button{
-  width:100%;
-  padding:12px;
-  background:#38b000;
-  color:white;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
-  cursor:pointer;
-}
-
-footer{
-  text-align:center;
-  background:#eee;
-  padding:20px;
+.categoria:hover{
+  background:#5a189a;
 }
