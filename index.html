@@ -1,73 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pegue & Monte - Catálogo</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pegue & Monte - Catálogo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="topo">
-    <img src="logo.png" class="logo" alt="Logo">
-    <h1>Pegue & Monte Festas</h1>
-    <p>Escolha seu kit, personalize e faça sua festa acontecer 🎉</p>
+  <img src="logo.png" class="logo" alt="Logo">
+  <h1>Pegue & Monte Festas</h1>
+  <p>Escolha seu kit, personalize e faça sua festa acontecer 🎉</p>
 </header>
 
 <section class="banner">
-    <div class="overlay">
-        <h2>Catálogo de Kits</h2>
-        <p>Opções para todos os estilos e orçamentos</p>
-    </div>
+  <div class="overlay">
+    <h2>Catálogo de Kits</h2>
+    <p>Opções para todos os estilos e orçamentos</p>
+  </div>
 </section>
 
 <section class="container">
-    <h2 class="titulo">Nossos Kits</h2>
+  <h2 class="titulo">Nossos Kits</h2>
 
-    <div class="grid">
+  <div class="grid">
 
-        <div class="card">
-            <img src="produto1.png">
-            <div class="info">
-                <h3>Kit Festa Infantil</h3>
-                <p>Mesa decorada, painel temático e itens essenciais para sua festa.</p>
-                <button onclick="contato('Kit Festa Infantil')">Quero este 🎈</button>
-            </div>
+    <!-- KIT 1 -->
+    <div class="card">
+      <img src="produto1.png" alt="Kit Festa Infantil">
+
+      <div class="info">
+        <h3>Kit Festa Infantil</h3>
+
+        <span class="preco">R$ 350,00</span>
+
+        <p class="descricao-curta">
+          Mesa decorada, painel temático e itens essenciais.
+        </p>
+
+        <div class="acoes">
+          <button class="ver-mais"
+            onclick="verMais(
+              'Kit Festa Infantil',
+              'Inclui mesa decorada, painel temático, toalha, suportes para doces, balões e itens personalizados.',
+              'R$ 350,00'
+            )">
+            Ver mais 👀
+          </button>
+
+          <button class="alugar"
+            onclick="contato(
+              'Kit Festa Infantil',
+              'R$ 350,00',
+              'produto1.png'
+            )">
+            Quero alugar 🎉
+          </button>
         </div>
-
-        <div class="card">
-            <img src="produto1.png">
-            <div class="info">
-                <h3>Kit Econômico</h3>
-                <p>Perfeito para quem quer praticidade com baixo custo.</p>
-                <button onclick="contato('Kit Econômico')">Quero este 🎁</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="produto1.png">
-            <div class="info">
-                <h3>Kit Premium</h3>
-                <p>Experiência completa com acabamento profissional.</p>
-                <button onclick="contato('Kit Premium')">Quero este ⭐</button>
-            </div>
-        </div>
-
+      </div>
     </div>
+
+    <!-- KIT 2 (EXEMPLO) -->
+    <div class="card">
+      <img src="produto2.png" alt="Kit Econômico">
+
+      <div class="info">
+        <h3>Kit Econômico</h3>
+
+        <span class="preco">R$ 220,00</span>
+
+        <p class="descricao-curta">
+          Praticidade e economia para festas simples.
+        </p>
+
+        <div class="acoes">
+          <button class="ver-mais"
+            onclick="verMais(
+              'Kit Econômico',
+              'Contém painel simples, mesa, toalha e suportes básicos.',
+              'R$ 220,00'
+            )">
+            Ver mais 👀
+          </button>
+
+          <button class="alugar"
+            onclick="contato(
+              'Kit Econômico',
+              'R$ 220,00',
+              'produto2.png'
+            )">
+            Quero alugar 🎁
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <footer>
-    <h3>Contato & Localização</h3>
-    <p>Seu endereço aqui<br>
-    Ataléia - MG</p>
-
-    <a class="maps" href="https://maps.google.com" target="_blank">Ver no Google Maps</a>
-
-    <p class="copy">© 2025 - Pegue & Monte Festas</p>
+  <h3>Contato & Localização</h3>
+  <p>Seu endereço aqui<br>Ataléia - MG</p>
+  <a class="maps" href="https://maps.google.com" target="_blank">
+    Ver no Google Maps
+  </a>
+  <p class="copy">© 2025 - Pegue & Monte Festas</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-conteudo">
+    <span class="fechar" onclick="fecharModal()">×</span>
+    <h2 id="modalTitulo"></h2>
+    <p id="modalDescricao"></p>
+    <strong id="modalPreco"></strong>
+  </div>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
